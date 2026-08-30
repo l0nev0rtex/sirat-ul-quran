@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirat-ul-Quran</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f6ef;
+            color: #26352d;
+        }
+
+        header {
+            background: #123c2d;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #d8b96a;
+        }
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(
+                rgba(18, 60, 45, 0.88),
+                rgba(18, 60, 45, 0.88)
+            );
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #d8b96a;
+            color: #123c2d;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 35px;
+            color: #123c2d;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 230px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            color: #123c2d;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about {
+            background: #eeeade;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .contact {
+            background: #123c2d;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        footer {
+            background: #0b291f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🕋 Sirat-ul-Quran</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Sirat-ul-Quran</h1>
+
+            <p>
+                Learn the Quran, improve your recitation,
+                understand its message, and walk towards
+                a life illuminated by its guidance.
+            </p>
+
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </section>
+
+
+    <section id="courses">
+        <h2>Our Quran Courses</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div style="font-size:40px;">📖</div>
+                <h3>Quran Reading</h3>
+                <p>
+                    Learn to read the Holy Quran correctly
+                    with proper pronunciation.
+                </p>
+            </div>
+
+            <div class="card">
+                <div style="font-size:40px;">✨</div>
+                <h3>Tajweed</h3>
+                <p>
+                    Learn the essential Tajweed rules
+                    for beautiful and accurate recitation.
+                </p>
+            </div>
+
+            <div class="card">
+                <div style="font-size:40px;">🌙</div>
+                <h3>Quran Translation</h3>
+                <p>
+                    Explore the meanings and messages
+                    of the Quran in an easy way.
+                </p>
+            </div>
+
+            <div class="card">
+                <div style="font-size:40px;">🕌</div>
+                <h3>Islamic Studies</h3>
+                <p>
+                    Learn basic Islamic knowledge,
+                    duas and important teachings.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <h2>About Sirat-ul-Quran</h2>
+
+        <p>
+            Sirat-ul-Quran is a Quran learning platform
+            created to make Quran education simple,
+            meaningful and accessible. Our goal is to help
+            learners develop a strong connection with the
+            Holy Quran through reading, Tajweed and understanding.
+        </p>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h2>Start Your Quran Journey</h2>
+
+        <p>
+            Ready to begin learning? Contact us today
+            to learn more about our classes.
+        </p>
+
+        <a href="mailto:your@email.com" class="btn">
+            Contact Us
+        </a>
+    </section>
+
+
+    <footer>
+        © 2026 Sirat-ul-Quran | Quran Learning Platform
+    </footer>
+
+</body>
+</html>
