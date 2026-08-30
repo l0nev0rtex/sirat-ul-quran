@@ -1,254 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirat-ul-Quran</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <title>Sirat-ul-Quran | Quran Learning Academy</title>
 
-        body {
-            background: #f8f6ef;
-            color: #26352d;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-        header {
-            background: #123c2d;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fbf8;
+      color: #24352b;
+      line-height: 1.6;
+    }
 
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-        }
+    header {
+      background: linear-gradient(135deg, #174d3c, #28745a);
+      color: white;
+      padding: 22px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 16px;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-        nav a:hover {
-            color: #d8b96a;
-        }
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
 
-        .hero {
-            min-height: 520px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(
-                rgba(18, 60, 45, 0.88),
-                rgba(18, 60, 45, 0.88)
-            );
-            color: white;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+    }
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        .hero p {
-            font-size: 20px;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.7;
-        }
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #e8f5ed, #fdfcf7);
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 30px;
-            background: #d8b96a;
-            color: #123c2d;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+    .hero-content {
+      max-width: 850px;
+    }
 
-        section {
-            padding: 70px 8%;
-            text-align: center;
-        }
+    .arabic {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #174d3c;
+    }
 
-        section h2 {
-            font-size: 34px;
-            margin-bottom: 35px;
-            color: #123c2d;
-        }
+    .hero h1 {
+      font-size: 48px;
+      color: #174d3c;
+      margin-bottom: 15px;
+    }
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+    .hero p {
+      font-size: 19px;
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #506258;
+    }
 
-        .card {
-            background: white;
-            width: 230px;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+    .btn {
+      display: inline-block;
+      background: #174d3c;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 7px;
+    }
 
-        .card h3 {
-            margin: 15px 0 10px;
-            color: #123c2d;
-        }
+    .btn:hover {
+      background: #28745a;
+    }
 
-        .card p {
-            line-height: 1.6;
-            color: #555;
-        }
+    section {
+      padding: 70px 8%;
+    }
 
-        .about {
-            background: #eeeade;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.8;
-            font-size: 17px;
-        }
+    .section-title h2 {
+      font-size: 34px;
+      color: #174d3c;
+      margin-bottom: 10px;
+    }
 
-        .contact {
-            background: #123c2d;
-            color: white;
-        }
+    .section-title p {
+      color: #66756c;
+    }
 
-        .contact h2 {
-            color: white;
-        }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
 
-        footer {
-            background: #0b291f;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #174d3c;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #68766e;
+      margin-bottom: 18px;
+    }
+
+    .lessons {
+      background: #eaf5ee;
+    }
+
+    .lesson-list {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .lesson {
+      background: white;
+      margin-bottom: 12px;
+      padding: 18px 22px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    }
+
+    .lesson span {
+      font-weight: bold;
+      color: #174d3c;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #5c6b62;
+      font-size: 17px;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      font-size: 18px;
+    }
+
+    .contact-item a {
+      color: #174d3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #174d3c;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .arabic {
+        font-size: 30px;
+      }
+
+      .lesson {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">🕋 Sirat-ul-Quran</div>
+<header>
+  <nav>
+    <div class="logo">🌙 Sirat-ul-Quran</div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#courses">Courses</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-
-    <section class="hero" id="home">
-        <div>
-            <h1>Sirat-ul-Quran</h1>
-
-            <p>
-                Learn the Quran, improve your recitation,
-                understand its message, and walk towards
-                a life illuminated by its guidance.
-            </p>
-
-            <a href="#courses" class="btn">Explore Courses</a>
-        </div>
-    </section>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
 
-    <section id="courses">
-        <h2>Our Quran Courses</h2>
+<section class="hero" id="home">
+  <div class="hero-content">
 
-        <div class="cards">
+    <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
 
-            <div class="card">
-                <div style="font-size:40px;">📖</div>
-                <h3>Quran Reading</h3>
-                <p>
-                    Learn to read the Holy Quran correctly
-                    with proper pronunciation.
-                </p>
-            </div>
+    <h1>Sirat-ul-Quran</h1>
 
-            <div class="card">
-                <div style="font-size:40px;">✨</div>
-                <h3>Tajweed</h3>
-                <p>
-                    Learn the essential Tajweed rules
-                    for beautiful and accurate recitation.
-                </p>
-            </div>
+    <p>
+      Learn, understand and explore the teachings of the Holy Quran
+      through simple and structured lessons.
+    </p>
 
-            <div class="card">
-                <div style="font-size:40px;">🌙</div>
-                <h3>Quran Translation</h3>
-                <p>
-                    Explore the meanings and messages
-                    of the Quran in an easy way.
-                </p>
-            </div>
+    <a href="#courses" class="btn">📚 Start Learning</a>
+    <a href="#contact" class="btn">📝 Enroll Now</a>
 
-            <div class="card">
-                <div style="font-size:40px;">🕌</div>
-                <h3>Islamic Studies</h3>
-                <p>
-                    Learn basic Islamic knowledge,
-                    duas and important teachings.
-                </p>
-            </div>
-
-        </div>
-    </section>
+  </div>
+</section>
 
 
-    <section class="about" id="about">
-        <h2>About Sirat-ul-Quran</h2>
+<section id="courses">
 
-        <p>
-            Sirat-ul-Quran is a Quran learning platform
-            created to make Quran education simple,
-            meaningful and accessible. Our goal is to help
-            learners develop a strong connection with the
-            Holy Quran through reading, Tajweed and understanding.
-        </p>
-    </section>
+  <div class="section-title">
+    <h2>📚 Our Courses</h2>
+    <p>Learn Quran step by step with beginner-friendly lessons.</p>
+  </div>
+
+  <div class="courses">
+
+    <div class="card">
+      <div class="icon">📖</div>
+      <h3>Quran Reading</h3>
+      <p>
+        Learn the basics of reading Arabic letters and Quranic words.
+      </p>
+      <a href="#lessons" class="btn">View Lessons</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌙</div>
+      <h3>Nazra Quran</h3>
+      <p>
+        Develop regular Quran reading practice with guided lessons.
+      </p>
+      <a href="#contact" class="btn">Enroll</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Basic Tajweed</h3>
+      <p>
+        Learn basic Tajweed concepts to improve Quran pronunciation.
+      </p>
+      <a href="#contact" class="btn">Enroll</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">💡</div>
+      <h3>Surah Understanding</h3>
+      <p>
+        Explore the themes and lessons of selected Surahs.
+      </p>
+      <a href="#contact" class="btn">Learn More</a>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <section id="contact" class="contact">
-        <h2>Start Your Quran Journey</h2>
+<section class="lessons" id="lessons">
 
-        <p>
-            Ready to begin learning? Contact us today
-            to learn more about our classes.
-        </p>
+  <div class="section-title">
+    <h2>📝 Beginner Lessons</h2>
+    <p>A simple learning path for beginners.</p>
+  </div>
 
-        <a href="mailto:your@email.com" class="btn">
-            Contact Us
-        </a>
-    </section>
+  <div class="lesson-list">
+
+    <div class="lesson">
+      <span>Lesson 1 — Introduction to Arabic Letters</span>
+      <strong>🔒</strong>
+    </div>
+
+    <div class="lesson">
+      <span>Lesson 2 — Recognizing Quranic Letters</span>
+      <strong>🔒</strong>
+    </div>
+
+    <div class="lesson">
+      <span>Lesson 3 — Basic Harakat</span>
+      <strong>🔒</strong>
+    </div>
+
+    <div class="lesson">
+      <span>Lesson 4 — Joining Arabic Letters</span>
+      <strong>🔒</strong>
+    </div>
+
+    <div class="lesson">
+      <span>Lesson 5 — Quran Reading Practice</span>
+      <strong>🔒</strong>
+    </div>
+
+    <div class="lesson">
+      <span>Lesson 6 — Revision & Practice</span>
+      <strong>🔒</strong>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <footer>
-        © 2026 Sirat-ul-Quran | Quran Learning Platform
-    </footer>
+<section id="about">
+
+  <div class="section-title">
+    <h2>🌿 About Sirat-ul-Quran</h2>
+  </div>
+
+  <div class="about">
+
+    <p>
+      Sirat-ul-Quran is an educational platform created to make
+      Quran learning simple, organized and accessible for beginners.
+      Our aim is to provide structured learning resources and
+      encourage students to build a meaningful connection with the Quran.
+    </p>
+
+    <br>
+
+    <p>
+      Students can explore Quran reading, basic Tajweed,
+      Surah understanding and regular learning activities.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="contact">
+
+  <div class="section-title">
+    <h2>📩 Contact & Enrollment</h2>
+    <p>Interested in learning? Contact us for enrollment information.</p>
+  </div>
+
+  <div class="contact-box">
+
+    <div class="contact-item">
+      📱 WhatsApp:
+      <a href="https://wa.me/923175854410" target="_blank">
+        03175854410
+      </a>
+    </div>
+
+    <div class="contact-item">
+      📧 Email:
+      <a href="mailto:shakeelzainab990@gmail.com">
+        shakeelzainab990@gmail.com
+      </a>
+    </div>
+
+    <br>
+
+    <a
+      href="https://wa.me/923175854410?text=Assalamualaikum%2C%20I%20am%20interested%20in%20Quran%20learning%20classes."
+      target="_blank"
+      class="btn"
+    >
+      💬 Contact on WhatsApp
+    </a>
+
+    <a
+      href="mailto:shakeelzainab990@gmail.com?subject=Quran%20Learning%20Enrollment"
+      class="btn"
+    >
+      ✉️ Send Email
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>🌙 <strong>Sirat-ul-Quran</strong></p>
+  <p>Learn • Understand • Reflect</p>
+  <p>© 2026 Sirat-ul-Quran. All rights reserved.</p>
+
+</footer>
 
 </body>
 </html>
